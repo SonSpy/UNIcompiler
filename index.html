@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/591485de7c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="name"><span class = "red">V</span>ishal.</div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hey! I am <span class = "red">Vishal</span><br>Computer Science Student<br>from KIIT University.</h1>
+                <img src="images/Photo.png">
+            </div>
+        </div>
+    </div>
+<!-- ----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Photo.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>My name is Vishal, Currently in 2nd Year of College Purusing B.Tech CSE at KIIT University. My interest lies in various fields of computer science. I am a good problem solver and am very good at adapting things very early. I have a keen interest in Technology. Few of my hobbies are Reading Books, Coding, Playing Games etc. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------Education--------------->
+<div id="education">
+    <h1 class="subtitle">My Education</h1>
+    <div class="box">
+        <div class="vertical">
+            <div class="vertical-title">
+                Kendriya Vidyalaya Gooty
+            </div>
+            <div class="vertical-desc">
+                studied from class 1 to class 5 at this school
+            </div>
+        </div>
+        <div class="vertical">
+            <div class="vertical-title">
+                Kendriya Vidyalaya Guntakal
+            </div>
+            <div class="vertical-desc">
+                studied from class 6 to class 8 at this school
+            </div>
+        </div>
+        <div class="vertical">
+            <div class="vertical-title">
+                Kendriya Vidyalaya Kankarbagh, Patna
+            </div>
+            <div class="vertical-desc">
+                studied from class 9 to class 12 at this school
+            </div>
+        </div>
+        <div class="vertical">
+            <div class="vertical-title">
+                Kalinga institute of Industrial Technology
+            </div>
+            <div class="vertical-desc">
+                Currently a sophomore in this University, Purusing BTech in Computer Science
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------skills---------- -->
+<div id="skills">
+    <div class="container">
+        <h1 class="subtitle">My Skills</h1>
+        <div class="skills-list">
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Python</h2>
+                <p>I have a good foundation in Python, will further expand it to advance level when I will step into learning Machine Learning.
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-c"></i>
+                <h2>C/C++</h2>
+                <p> I have a firm grasp on the C Language. C++ is my staple Language, I am looking forward to master it.
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Data Structures</h2>
+                <p> I am Currently Learning Data Structures. I have completed Arrays, Searching, Sorting, Complexities etc.
+                </p>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p> Also, I am Learning Web Development along with DSA side by side, I've completed learning HTML, CSS and Javascript. Will learn Mearn Stack in upcoming days.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -----------contact----------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> sonvishalspy@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +919507636313</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/_vishalkun/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vishal-835397267/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/RESUME.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name"  required>
+                    <input type="email" name="Email" placeholder="abcd@gmail.com" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" color="white"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = 0;
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx2YmRMviWE0sHUW8MJfA2QOTHEuF8b8-PrtDzm3EMRdoEn4m58ppd_-tYXYiuIGud7/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
